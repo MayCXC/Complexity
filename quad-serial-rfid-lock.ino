@@ -26,22 +26,6 @@ void setup()
   digitalWrite(2,HIGH);
 }
 
-/** Test loop, prints all tag IDs as they are read
-void loop() {
-  for(int i=0; i<N_SS; i++) {
-    soft[i].listen();
-    delay(200);
-    if(soft[i].available()) {
-      while(soft[i].available()) {
-        Serial.print(soft[i].read());
-        Serial.print(",");
-      }
-      Serial.println();
-    }
-  }
-}
-**/
-
 // Main loop, repeats every 200ms
 void loop()
 {  
