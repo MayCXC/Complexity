@@ -43,7 +43,7 @@ void loop()
         i++;
       }
 
-      // Print the number of bytes read
+      // Print the bytes this sensor read
       Serial.print("Reader #");
       Serial.print(s);
       Serial.print(" read ");
