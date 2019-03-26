@@ -18,7 +18,11 @@ The door lock was originally implemented with four MiFare rfid card readers. Eac
 #### Unreliable
 After testing the shortcomings of the first door lock and further research, the door lock was refit with four seeed uart rfid readers. These readers had support for external antennas, which was a better design for the structure of the frames. They also only required four connections per reader, two shared and two seperate. Arduino UNOs only have one hardware serial input, so the readers connected to four digital inputs, and the software serial library was used to read from each one after the next. Unfortunately, these readers only read a tag once, so any noise or interruption in the serial connection completely prevents a tag from being read. While all four readers worked in this configuration, they were not reliable enough to use in the final puzzle.
 
+___
+
 Both types of RFID sensors sent power and data through Cat5e cables at TTL voltages. This type of connection is only meant to span short distances; further research showed that to reliably extend it, we would have to use two RS232 shifters per serial connection, eight shifters in total. Each shifter would also have to be powered with eight DC power connections in addition to our four serial conections, which was too demanding. Even using rfid tags for the puzzle now seemed too demanding; one byte of data at sixty baud was more than enough.
+
+___
 
 ### Hall Effect Sensors, Neodinium Magnets
 #### Very Reliable
