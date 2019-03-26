@@ -50,7 +50,7 @@ This anemometer worked well for detecting when a player blew on them, but while 
 
 ### Piezo Sensors
 #### Very reliable
-Simple piezo sensors worked far better than the wind sensors, their analog reading reliably drops to zero when they are blown on. I expected them to also pick up noise in the room, as they are normally used as acoustic sensors, but no amount of clapping and stomping had the same effect as blowing on them. Surprisingly, researching this use case online found nothing. The sensor readings slowly rise while they are powered, but they seem to top out eventually and this has had no consequences yet.
+Simple piezo sensors worked far better than the wind sensors, their analog reading reliably drops to zero when they are blown on. I expected them to also pick up noise in the room, as they are normally used as acoustic sensors, but no amount of clapping and stomping had the same effect as blowing on them. Surprisingly, researching this use case online found nothing. The sensor readings slowly rise while they are powered, but they seem to top out eventually, and this has had no consequences yet.
 
 ### Magnetic Door Locks, DC Relays
 #### Reliable
