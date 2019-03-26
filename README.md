@@ -20,7 +20,7 @@ After testing the shortcomings of the first door lock and further research, the 
 
 ___
 
-Both types of RFID sensors sent power and data through Cat5e cables at TTL voltages. This type of connection is only meant to span short distances; further research showed that to reliably extend it, we would have to use two RS232 shifters per serial connection, eight shifters in total. Each shifter would also have to be powered with eight DC power connections in addition to our four serial conections, which was too demanding. Even using rfid tags for the puzzle now seemed too demanding; one byte of data at sixty baud was more than enough.
+Both types of RFID sensors sent power and data through Cat5e cables at TTL voltages. This type of connection is only meant to span short distances; further research showed that to reliably extend it, we would have to use two RS232 shifters per serial connection, eight shifters in total. The shifters would also have to be powered with eight seperate DC power connections, in addition to our four serial conections, which was too demanding. Even using rfid tags for the puzzle now seemed too demanding; one byte of data at sixty baud was more than enough.
 
 ___
 
