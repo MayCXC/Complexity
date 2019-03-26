@@ -12,7 +12,7 @@ Every puzzle needs to have at least two states, including unsolved and solved. T
 ## Hardware Performance
 ### SPI RFID Readers, High Frequency RFID Tags
 #### Very Unreliable
-The door lock was originally implemented with four MiFare rfid card readers. Each worked well separately, but gave very unreliable readings when used together. Our initial research turned up examples of multiple readers connected to one Arduino using jumper wires, but when we used longer cables their reliability dramatically decreased. Our tests showed at short distances, the readers could reliably share SCK, RST, MISO, MOSI, VCC, and GND connections, and use a separate SDA connections. At long distances, we could reliably use a single reader. Sadly, we could not do both.
+The door lock was originally implemented with four MiFare rfid card readers. Each worked well separately, but gave very unreliable readings when used together. Our initial research turned up examples of multiple readers connected to one Arduino using jumper wires, but when we used longer cables, their reliability dramatically decreased. Our tests showed at short distances, the readers could reliably share SCK, RST, MISO, MOSI, VCC, and GND connections, and use a separate SDA connections. At long distances, we could reliably use a single reader. Sadly, we could not do both.
 
 ### UART RFID Readers, Low Frequency RFID Tags
 #### Unreliable
@@ -20,7 +20,7 @@ After testing the shortcomings of the first door lock and further research, the 
 
 ___
 
-Both types of RFID sensors sent power and data through cat5e cables at TTL voltages. This type of connection is only meant to span short distances; further research showed that to reliably extend it, we would have to use two rs232 shifters per serial connection, eight shifters in total. The shifters would also have to be powered with eight separate DC power connections, in addition to our four serial connections, which was too demanding. Even using rfid tags for the puzzle now seemed too demanding; one byte of data at sixty baud was more than enough for what we needed.
+Both types of RFID sensors sent power and data through cat5e cables at TTL voltages. This type of connection is only meant to span short distances; further research revealed that to extend it reliably, we would have to use two rs232 shifters per serial connection, so eight shifters in total. The shifters would also have to be powered with eight separate DC power connections, in addition to the four serial connections, which was too demanding. Even using rfid tags for the puzzle now seemed too demanding; one byte of data at sixty baud was more than enough for what we needed, and far less than the readers provided.
 
 ___
 
@@ -38,19 +38,19 @@ Longer connections in the door lock and the fireplace use cut and crimped cat5e 
 
 ### Power Supplies, Breadboard, DuPont Jumper Wires
 #### Reliable
-The power supplies provide a reliable 5v output from a 12v dc power connection, which here is coming from an adapter plugged into the wall. Although they protect against short circuits, the two supplies I shorted now read ten volts on a multimeter, rather than the expected five. To avoid this, and to keep up with the constant structural changes to the puzzles, the components were connected with breadboards and dupont wires. (The less stripping and soldering, the better.)
+The power supplies provide a reliable 5v output from a 12v dc power connection, which here is coming from an adapter plugged into the wall. Although they are advertised as protecting against short circuits, the two supplies I shorted now read ten volts on a multimeter, rather than the expected five. To avoid this, and to keep up with the constant structural changes to the puzzles, the components were connected with breadboards and dupont wires. (The less stripping and soldering, the better.)
 
 ### RGB LEDs
 #### Reliable
-Soldering jumper wires to these is tricky, but they are very bright and colorful. The lights were first embedded into wax candles with hot glue, but they heated up enough to melt the wax through the glue, so they are now hanging freely inside the candles. I first tried programming them with the FastLED library I was familiar with, but the vendor Adafruit NeoPixel library worked better with multiple outputs.
+Soldering jumper wires to these is tricky, but they are very bright and colorful. The lights were first embedded into wax candles with hot glue, but they heated up enough to melt the wax through the glue, so they are now hanging freely inside the candles. I first tried programming them with the FastLED library I was familiar with, but the vendor Adafruit NeoPixel library worked better for multiple outputs.
 
 ### Wind Sensor rev C
 #### Unreliable
-This anemometer worked well for detecting when a player blew on them, but while I was between visits every single one of them failed. Once again we decided that they were excessive, they are meant to produce accurate wind speed readings, and we just need to know the order they are blown on, not how hard.
+This anemometer worked well for detecting when a player blew on them, but while I was between visits every single one of them failed. Once again we decided that they were excessive; they are meant to produce accurate wind speed readings, and we just need to know the order that the sensors are blown on, not how hard they are blown on.
 
 ### Piezo Sensors
 #### Very reliable
-Simple piezo sensors worked perfectly for this use, their analog reading reliably drops to zero when they are blown on. I expected them to also pick up noise in the room, as they are normally used as acoustic sensors, but no amount of clapping and stomping had the same effect as blowing on them. Surprisingly, researching this use case online found nothing.
+Simple piezo sensors worked far better than the wind sensors, their analog reading reliably drops to zero when they are blown on. I expected them to also pick up noise in the room, as they are normally used as acoustic sensors, but no amount of clapping and stomping had the same effect as blowing on them. Surprisingly, researching this use case online found nothing. The sensor readings slowly rise while they are powered, but they seem to top out eventually and this has had no consequences yet.
 
 ### Magnetic Door Locks, DC Relays
 #### Reliable
