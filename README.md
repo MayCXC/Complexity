@@ -36,7 +36,7 @@ Pictures hang in order, by number of penguins:
 ### Reset Condition
 All four pictures are removed.
 
-### quad-spi-rfid-lock and quad-uart-rfid-lock
+## quad-spi-rfid-lock and quad-uart-rfid-lock
 This program tries to read four rfid tag IDs and check if they are in a certain
 order. Reading the rfid tags never worked reliably enough to use these in a
 puzzle.
