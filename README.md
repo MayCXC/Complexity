@@ -9,6 +9,38 @@ The room these puzzles are in is dimly lit, which makes it hard for an employee 
 ## Design
 Every puzzle needs to have at least two states, including unsolved and solved. The transition from unsolved to solved is what players try to figure out during their session, the transition back from solved to unsolved is what employees use to reset the room between sessions. Therefore, we want the unsolved to solved transition to be arbitrarily difficult, and the solved to unsolved transition to be simple for employees and hard for players.
 
+# Arduino Programs
+
+## hall-effect-light
+This program turns on a relay when eight hall effect sensors activate. In the
+room, it is used to turn on the fireplace when each dowel is in the right hole
+and facing forwards.
+
+### Win Condition
+All eight dowels are in place.
+
+### Reset Condition
+All eight dowels are removed.
+
+## hall-effect-lock
+This program uses the same logic as hall-effect-light to open a hidden door
+lock when all four pictures hang on the right pegs.
+
+### Win Condition
+Pictures hang in order, by number of penguins:
+```
+1 4
+3 2
+```
+
+### Reset Condition
+All four pictures are removed.
+
+## quad-spi-rfid-lock and quad-uart-rfid-lock
+This program tries to read four rfid tag IDs and check if they are in a certain
+order. Reading the rfid tags never worked reliably enough to use these in a
+puzzle.
+
 ## Hardware Performance
 ### SPI RFID Readers, High Frequency RFID Tags
 #### Very Unreliable
