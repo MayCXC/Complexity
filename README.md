@@ -4,7 +4,7 @@
 These programs are running on Arduino installations in Complexity Rooms of Farmington, Connecticut. Each is used to monitor and respond to the progress of escape room players as they complete various puzzles. Complexity had used some electronic sensors in their other rooms, but this was the first time game logic was automated electronically, rather than having an employee monitor a camera feed of the players and respond to their progress manually.
 
 ## Considerations
-The room these puzzles are in is dimly lit, which makes it hard for an employee to see them through a camera feed. There are also many electronic devices powered by relays that trigger when these puzzles are solved, which are easy to use with microcontrollers. Complexity had already began working on an rfid door lock when I started working on the room, and already had several Arduino UNOs, DC relays, and wiring supplies.
+The room these puzzles are in is dimly lit, which makes it hard for an employee to see them through a camera feed. There are also many electronic devices powered by relays that trigger when these puzzles are solved, which are easy to use with microcontrollers. Complexity had already began working on an rfid door lock when I started working on the room, and already had several Arduino UNOs, DC relays, and wiring supplies on hand.
 
 ## Design
 Every puzzle needs to have at least two states, including unsolved and solved. The transition from unsolved to solved is what players try to figure out during their session, the transition back from solved to unsolved is what employees use to reset the room between sessions. Therefore, we want the unsolved to solved transition to be arbitrarily difficult, and the solved to unsolved transition to be simple for employees and hard for players.
@@ -12,9 +12,7 @@ Every puzzle needs to have at least two states, including unsolved and solved. T
 # Arduino Programs
 
 ## hall-effect-light
-This program turns on a relay when eight hall effect sensors activate. In the
-room, it is used to turn on the fireplace when each dowel is in the right hole
-and facing forwards.
+This program turns on a relay when eight hall effect sensors activate. In the room, it is used to turn on the fireplace when each dowel is in the right hole and facing forwards.
 
 ### Win Condition
 All eight dowels are in place.
@@ -23,11 +21,10 @@ All eight dowels are in place.
 All eight dowels are removed.
 
 ## hall-effect-lock
-This program uses the same logic as hall-effect-light to open a hidden door
-lock when all four pictures hang on the right pegs.
+This program uses the same logic as hall-effect-light to open a hidden door lock when all four pictures hang on certain pegs.
 
 ### Win Condition
-Pictures hang in order, by number of penguins:
+Pictures hang in the correct position. By number of penguins:
 ```
 1 4
 3 2
@@ -36,10 +33,18 @@ Pictures hang in order, by number of penguins:
 ### Reset Condition
 All four pictures are removed.
 
+## led-piezo-light-lock
+This program lights six NeoPixel LEDs inside wax candles when a player blows on a piezo sensor positioned behind their wick. When all six candles are blown on in the right order, it activates a relay. In the room, this relay opens a secret door. Blowing the candles on in the wrong order or taking too long to finish resets the puzzle. For safety, the relay is not reactivated on until the next power cycle.
+
+## Win Condition
+Candles are blown on in order. By order from 0 to 5 left to right:
+`2 4 1 0 3 5`
+
+## Reset Condition
+Players take too long to blow out the next candle.
+
 ## quad-spi-rfid-lock and quad-uart-rfid-lock
-This program tries to read four rfid tag IDs and check if they are in a certain
-order. Reading the rfid tags never worked reliably enough to use these in a
-puzzle.
+This program tries to read four rfid tag IDs and check if they are in a certain order. Reading the rfid tags never worked reliably enough to use these in a puzzle.
 
 ## Hardware Performance
 ### SPI RFID Readers, High Frequency RFID Tags
