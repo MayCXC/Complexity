@@ -78,7 +78,9 @@ int last[N_IN] = {0}; // store the last input of each sensor
 
 int order[N_IN] = {-1}; // the order in which the candles were blown out
 int win[N_IN] = { 2,4,1,0,3,5 }; // the win condition peizo sequence
-void progress(int p) { // add a candle to the order
+double recent = 0.0;
+void progress(int p, int theta) { // add a candle to the order
+  recent = theta;
   for(int n=0; n<N_IN; n++)
     if(order[n]<0) {
       order[n] = p;
@@ -86,7 +88,7 @@ void progress(int p) { // add a candle to the order
     }
 }
 
-void loop() {  
+void loop() {
   double theta = seconds();
 
   for(int n=0; n<N_IN; n++) { // read its sensor input, display its LED, and update the order for each candle
@@ -94,7 +96,7 @@ void loop() {
     int delta = last[n]-next;
 
     if(light(n, next, delta, flame[n]*pow(wind,.25), theta))
-      progress(n);
+      progress(n, theta);
 
     last[n] = next;
   }
@@ -102,13 +104,17 @@ void loop() {
   bool won = true; // unlock the door if the current order matches the win order
   for(int n=0; n<N_IN; n++)
     won = won && order[n] == win[n];
+
   digitalWrite(8, !won);
 
-  if( !won && order[N_IN-1]>=0) { // reset the puzzle if all candles were activated in the wrong order
+  // reset the puzzle if all candles were activated in the wrong order, or if players are taking too long
+  if( !won && ( order[N_IN-1]>=0 || recent > 0.0 && theta-recent > breath ) ) { 
+    recent = 0.0;
+    
     for(int n=0; n<N_IN; n++)
       order[n] = -1;
 
-    while(anySensorHot() || seconds() < theta + 3.0) // flicker the candles and wait for the sensors to warm up
+    while(anySensorHot() || seconds() < breath/2) // flicker the candles and wait for the sensors to warm up
       for(int n=0; n<N_IN; n++)
         light(n, 0, 0, 2*smolder, 2*seconds());
 
