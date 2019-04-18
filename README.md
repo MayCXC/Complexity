@@ -57,8 +57,8 @@ This program tries to read four rfid tag IDs and check if they are in a certain 
 
 ## Hardware Performance
 ### SPI RFID Readers, High Frequency RFID Tags
-#### Very Unreliable
-The door lock was originally implemented with four MiFare rfid card readers. Each worked well separately, but gave very unreliable readings when used together. Our initial research turned up examples of multiple readers connected to one Arduino using jumper wires, but when we used longer cables, their reliability dramatically decreased. Our tests showed at short distances, the readers could reliably share SCK, RST, MISO, MOSI, VCC, and GND connections, and use a separate SDA connections. At long distances, we could reliably use a single reader. Sadly, we could not do both.
+#### Unreliable
+The door lock was originally implemented with four MiFare rfid card readers. Each worked well separately, but gave very unreliable readings when used together. Our initial research turned up examples of multiple readers connected to one Arduino using jumper wires, but when we used longer cables, their reliability dramatically decreased. Our tests showed at short distances, the readers could reliably share SCK, RST, MISO, MOSI, VCC, and GND connections, and use a separate SDA connections. At long distances, we could reliably use a single reader. Sadly, we could not do both. An undocumented fix allowed us to use these reliably enough at shorter distances for the fish puzzle.
 
 ### UART RFID Readers, Low Frequency RFID Tags
 #### Unreliable
