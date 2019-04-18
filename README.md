@@ -43,7 +43,16 @@ Candles are blown on in order. By order from 0 to 5 left to right:
 ### Reset Condition
 Players take too long to blow out the next candle.
 
-## quad-spi-rfid-lock and quad-uart-rfid-lock
+## quad-spi-rfid-lock
+This program opens a maglock when fish props are hung on the correct hooks. This is logically equivalent to the first version of what is now the **hall-effect-lock** puzzle, but it uses shorter wires and an undocumented fix to make the readers work more reliably.
+
+### Win Condition
+Fish hang in the correct position.
+
+### Reset Condition
+All four fish are removed.
+
+## quad-uart-rfid-lock
 This program tries to read four rfid tag IDs and check if they are in a certain order. Reading the rfid tags never worked reliably enough to use these in a puzzle.
 
 ## Hardware Performance
