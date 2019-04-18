@@ -36,11 +36,11 @@ All four pictures are removed.
 ## led-piezo-light-lock
 This program lights six NeoPixel LEDs inside wax candles when a player blows on a piezo sensor positioned behind their wick. When all six candles are blown on in the right order, it activates a relay. In the room, this relay opens a secret door. Blowing the candles on in the wrong order or taking too long to finish resets the puzzle. For safety, the relay is not reactivated on until the next power cycle.
 
-## Win Condition
+### Win Condition
 Candles are blown on in order. By order from 0 to 5 left to right:
 `2 4 1 0 3 5`
 
-## Reset Condition
+### Reset Condition
 Players take too long to blow out the next candle.
 
 ## quad-spi-rfid-lock and quad-uart-rfid-lock
