@@ -5,8 +5,10 @@
  * Signal      Pin          Pin           Pin       Pin        Pin              Pin
  * -----------------------------------------------------------------------------------------
  * RST/Reset   RST          9             5         D9         RESET/ICSP-5     RST
- * SPI SS 1    SDA(SS)      ** custom, take a unused pin, only HIGH/LOW required **
- * SPI SS 2    SDA(SS)      ** custom, take a unused pin, only HIGH/LOW required **
+ * SPI SS 1    SDA(SS)      2             -         -          -                -
+ * SPI SS 2    SDA(SS)      3             -         -          -                -
+ * SPI SS 3    SDA(SS)      4             -         -          -                -
+ * SPI SS 4    SDA(SS)      5             -         -          -                -
  * SPI MOSI    MOSI         11 / ICSP-4   51        D11        ICSP-4           16
  * SPI MISO    MISO         12 / ICSP-1   50        D12        ICSP-1           14
  * SPI SCK     SCK          13 / ICSP-3   52        D13        ICSP-3           15
@@ -35,11 +37,13 @@ MFRC522 rfid[N_IN]; // initialize a seperate reader on each input
 void setup() { // begin communications
   Serial.begin(9600);
   SPI.begin();
+
+  pinMode(7, OUTPUT); // relay pin
 }
 
 void loop() {
   digitalWrite(7, won); // set relay state
-  
+
   int matches = 0; // count the number of uid matches we find
   
   for(int i=0; i<N_IN; i++) { // compare input from each reader
@@ -63,6 +67,6 @@ void loop() {
     }
   }
 
-  if(matches == N_IN) won = LOW; // all tags in the correct position, open the relay
-  if(matches == 0) won = HIGH; // no tags in the correct position, close the relay
+  if(matches == N_IN) won = HIGH; // all tags in their correct position, open the relay
+  if(matches == 0) won = LOW; // no tags in their correct position, close the relay
 }
