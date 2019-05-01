@@ -10,11 +10,12 @@ The room these puzzles are in is dimly lit, which makes it hard for an employee 
 Every puzzle needs to have at least two states, including unsolved and solved. The transition from unsolved to solved is what players try to figure out during their session, the transition back from solved to unsolved is what employees use to reset the room between sessions. Therefore, we want the unsolved to solved transition to be arbitrarily difficult, and the solved to unsolved transition to be simple for employees and hard for players.
 
 ### Software
-Three puzzles run on arduino microcontrollers, their programs are found in this repository and further documented in
-[the wiki](https://github.com/mayhd3/Complexity/wiki/Arduino-Programs).
-One puzzle runs on five escapekeeper juniors, in the configuration described [in the wiki.](https://github.com/mayhd3/Complexity/wiki/EscapeKeeper-Setup)
+Three puzzles run on arduino microcontrollers, their programs are found in this repository and further documented
+[in the wiki](https://github.com/mayhd3/Complexity/wiki/Arduino-Programs).
+One puzzle runs on five escapekeeper juniors, in the configuration described
+[in the wiki.](https://github.com/mayhd3/Complexity/wiki/EscapeKeeper-Setup)
 
 ### Hardware
-An ongoing list of hardware we used and scrapped is also found in
-[the wiki](https://github.com/mayhd3/Complexity/wiki/Hardware-Performance).
+An ongoing list of hardware we used and scrapped is also found
+[in the wiki](https://github.com/mayhd3/Complexity/wiki/Hardware-Performance).
 The list includes parts we did not ultimately use.
