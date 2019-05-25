@@ -39,12 +39,14 @@ void setup() { // begin communications
   SPI.begin();
 
   pinMode(7, OUTPUT); // relay pin
+  for(int i=0; i<N_IN; i++) // input pins
+    pinMode(inputs[i], INPUT_PULLUP);
 }
 
 void loop() {
   digitalWrite(7, won); // set relay state
 
-  int matches = 0; // count the number of uid matches we find
+  int readers = 0, matches = 0; // count the number of readers and matches we find
   
   for(int i=0; i<N_IN; i++) { // compare input from each reader
     digitalWrite(inputs[i], HIGH); // fixes unreliable input, see https://github.com/miguelbalboa/rfid/issues/290
@@ -54,6 +56,7 @@ void loop() {
     delay(50);
 
     if ( rfid[i].PICC_IsNewCardPresent() && rfid[i].PICC_ReadCardSerial() ) { // we found a tag
+      readers++;
       // rfid[i].PICC_DumpToSerial(&(rfid[i].uid));
       boolean match = true; // true if every byte matches
       for(int j=0; j<rfid[i].uid.size; j++)
@@ -67,6 +70,6 @@ void loop() {
     }
   }
 
-  if(matches == N_IN) won = HIGH; // all tags in their correct position, open the relay
-  if(matches == 0) won = LOW; // no tags in their correct position, close the relay
+  if(matches + (readers == N_IN) >= N_IN) won = HIGH; // all tags in their correct position, close the relay
+  if(matches == 0) won = LOW; // no tags in their correct position, open the relay
 }
