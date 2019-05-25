@@ -1,7 +1,7 @@
-# Complexity Rooms Client Code
+# Ｃｏｍｐｌｅｘｉｔｙ Rooms Client Code
 
 ## Description
-These programs are running on Arduino installations in Complexity Rooms of Farmington, Connecticut. Each is used to monitor and respond to the progress of escape room players as they complete various puzzles. Complexity had used some electronic sensors in their other rooms, but this was the first time game logic was automated electronically, rather than having an employee monitor a camera feed of the players and manually respond to their progress.
+These programs are running on Arduino installations in Ｃｏｍｐｌｅｘｉｔｙ Rooms of Farmington, Connecticut. Each is used to monitor and respond to the progress of escape room players as they complete various puzzles. Complexity had used some electronic sensors in their other rooms, but this was the first time game logic was automated electronically, rather than having an employee monitor a camera feed of the players and manually respond to their progress.
 
 ## Considerations
 The room these puzzles are in is dimly lit, which makes it hard for an employee to see them through a camera feed. There are also many electronic devices powered by relays that trigger when these puzzles are solved, which are easy to use with microcontrollers. Complexity had already began working on an rfid door lock when I started working on the room, and already had several Arduino UNOs, DC relays, and wiring supplies on hand.
