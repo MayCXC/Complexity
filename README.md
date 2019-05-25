@@ -12,7 +12,9 @@ Every puzzle needs to have at least two states, including unsolved and solved. T
 ### Software
 Three puzzles run on arduino microcontrollers, their programs are found in this repository and further documented
 [in the wiki](https://github.com/mayhd3/Complexity/wiki/Arduino-Programs).
-One puzzle runs on five escapekeeper juniors, in the configuration described
+One puzzle runs on five
+[escapekeeper juniors](https://www.frightideas.com/escapekeeper-jr.html),
+in the configuration described
 [in the wiki.](https://github.com/mayhd3/Complexity/wiki/EscapeKeeper-Setup)
 
 ### Hardware
