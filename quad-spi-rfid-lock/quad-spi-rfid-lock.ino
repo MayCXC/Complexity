@@ -47,7 +47,7 @@ void loop() {
   digitalWrite(7, won); // set relay state
 
   int readers = 0, matches = 0; // count the number of readers and matches we find
-  
+
   for(int i=0; i<N_IN; i++) { // compare input from each reader
     digitalWrite(inputs[i], HIGH); // fixes unreliable input, see https://github.com/miguelbalboa/rfid/issues/290
     delay(50);
