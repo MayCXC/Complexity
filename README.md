@@ -22,3 +22,11 @@ in the configuration described
 An ongoing list of hardware we used and scrapped is also found
 [in the wiki](https://github.com/mayhd3/Complexity/wiki/Hardware-Performance).
 The list includes parts we did not ultimately use.
+
+### Gallery
+
+![gallery](https://raw.githubusercontent.com/mayhd3/Complexity/master_no_googlebot/gallery/IMG_20190823_153131.jpg)
+![gallery](https://raw.githubusercontent.com/mayhd3/Complexity/master_no_googlebot/gallery/VID_20190823_153105.mp4)
+![gallery](https://raw.githubusercontent.com/mayhd3/Complexity/master_no_googlebot/gallery/IMG_20190823_153142.jpg)
+![gallery](https://raw.githubusercontent.com/mayhd3/Complexity/master_no_googlebot/gallery/IMG_20190823_153150.jpg)
+![gallery](https://raw.githubusercontent.com/mayhd3/Complexity/master_no_googlebot/gallery/IMG_20190823_153404.jpg)
