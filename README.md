@@ -25,8 +25,17 @@ The list includes parts we did not ultimately use.
 
 ### Gallery
 
+#### [The Candle Puzzle](https://github.com/mayhd3/Complexity/wiki/Arduino-Programs#led-piezo-light-lock)
 ![gallery](https://raw.githubusercontent.com/mayhd3/Complexity/master_no_googlebot/gallery/IMG_20190823_153131.jpg)
-![gallery](https://raw.githubusercontent.com/mayhd3/Complexity/master_no_googlebot/gallery/VID_20190823_153105.mp4)
+[video demonstration](https://raw.githubusercontent.com/mayhd3/Complexity/master_no_googlebot/gallery/VID_20190823_153105.mp4)
+
+#### [The Sticks Puzzle](https://github.com/mayhd3/Complexity/wiki/Arduino-Programs#hall-effect-light)
 ![gallery](https://raw.githubusercontent.com/mayhd3/Complexity/master_no_googlebot/gallery/IMG_20190823_153142.jpg)
+
+#### [The Fish Puzzle](https://github.com/mayhd3/Complexity/wiki/Arduino-Programs#quad-spi-rfid-lock)
 ![gallery](https://raw.githubusercontent.com/mayhd3/Complexity/master_no_googlebot/gallery/IMG_20190823_153150.jpg)
+
+#### [The Egg Puzzle](https://github.com/mayhd3/Complexity/wiki/EscapeKeeper-Setup)
 ![gallery](https://raw.githubusercontent.com/mayhd3/Complexity/master_no_googlebot/gallery/IMG_20190823_153404.jpg)
+
+Not pictured is [The Picture Puzzle](https://github.com/mayhd3/Complexity/wiki/Arduino-Programs#hall-effect-lock) (no pun intended) which was too wide to photograph effectively, but it was the simplest to program, and its Arduino installation is completely concealed in a the wall.  
