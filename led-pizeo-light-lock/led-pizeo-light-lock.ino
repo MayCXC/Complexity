@@ -41,7 +41,7 @@ int flicker(int amplitude, double theta, double phase) { // wave function used t
   return (int)(amplitude*(1+sin(2*PI*(theta+phase))));
 }
 
-/* set a candle's brightness, returns true iff a candle passes above the "caught" limit, dependant on:
+/* set a candle's brightness, returns true iff a candle passes above the "caught" limit, dependent on:
  * n, the input/output index
  * next, the sensor input
  * delta, the change in input
