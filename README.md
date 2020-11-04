@@ -38,4 +38,4 @@ The list includes parts we did not ultimately use.
 #### [The Egg Puzzle](https://github.com/mayhd3/Complexity/wiki/EscapeKeeper-Setup)
 ![gallery](https://raw.githubusercontent.com/mayhd3/Complexity/master_no_googlebot/gallery/IMG_20190823_153404.jpg)
 
-Not pictured is [The Picture Puzzle](https://github.com/mayhd3/Complexity/wiki/Arduino-Programs#hall-effect-lock) (no pun intended) which was too wide to photograph, but it was the simplest to program, and its Arduino installation is completely concealed in a the wall.  
+Not pictured is [The Picture Puzzle](https://github.com/mayhd3/Complexity/wiki/Arduino-Programs#hall-effect-lock) (no pun intended) which was too wide to fit in frame, but it was the simplest to program, and its Arduino installation is completely concealed in a the wall.  
