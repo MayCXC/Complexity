@@ -12,30 +12,30 @@ Every puzzle needs to have at least two states, including unsolved and solved. T
 
 ### Software
 Three puzzles run on arduino microcontrollers, their programs are found in this repository and further documented
-[in the wiki](https://github.com/mayhd3/Complexity/wiki/Arduino-Programs).
+[in the wiki](https://github.com/MayCXC/Complexity/wiki/Arduino-Programs).
 One puzzle runs on five
 [escapekeeper juniors](https://www.frightideas.com/escapekeeper-jr.html),
 in the configuration described
-[in the wiki.](https://github.com/mayhd3/Complexity/wiki/EscapeKeeper-Setup)
+[in the wiki.](https://github.com/MayCXC/Complexity/wiki/EscapeKeeper-Setup)
 
 ### Hardware
 An ongoing list of hardware we used and scrapped is also found
-[in the wiki](https://github.com/mayhd3/Complexity/wiki/Hardware-Performance).
+[in the wiki](https://github.com/MayCXC/Complexity/wiki/Hardware-Performance).
 The list includes parts we did not ultimately use.
 
 ### Gallery
 
-#### [The Candle Puzzle](https://github.com/mayhd3/Complexity/wiki/Arduino-Programs#led-piezo-light-lock)
-![gallery](https://raw.githubusercontent.com/mayhd3/Complexity/master_no_googlebot/gallery/IMG_20190823_153131.jpg)
-[video demonstration](https://raw.githubusercontent.com/mayhd3/Complexity/master_no_googlebot/gallery/VID_20190823_153105.mp4)
+#### [The Candle Puzzle](https://github.com/MayCXC/Complexity/wiki/Arduino-Programs#led-piezo-light-lock)
+![gallery](https://raw.githubusercontent.com/MayCXC/Complexity/master_no_googlebot/gallery/IMG_20190823_153131.jpg)
+[video demonstration](https://raw.githubusercontent.com/MayCXC/Complexity/master_no_googlebot/gallery/VID_20190823_153105.mp4)
 
-#### [The Sticks Puzzle](https://github.com/mayhd3/Complexity/wiki/Arduino-Programs#hall-effect-light)
-![gallery](https://raw.githubusercontent.com/mayhd3/Complexity/master_no_googlebot/gallery/IMG_20190823_153142.jpg)
+#### [The Sticks Puzzle](https://github.com/MayCXC/Complexity/wiki/Arduino-Programs#hall-effect-light)
+![gallery](https://raw.githubusercontent.com/MayCXC/Complexity/master_no_googlebot/gallery/IMG_20190823_153142.jpg)
 
-#### [The Fish Puzzle](https://github.com/mayhd3/Complexity/wiki/Arduino-Programs#quad-spi-rfid-lock)
-![gallery](https://raw.githubusercontent.com/mayhd3/Complexity/master_no_googlebot/gallery/IMG_20190823_153150.jpg)
+#### [The Fish Puzzle](https://github.com/MayCXC/Complexity/wiki/Arduino-Programs#quad-spi-rfid-lock)
+![gallery](https://raw.githubusercontent.com/MayCXC/Complexity/master_no_googlebot/gallery/IMG_20190823_153150.jpg)
 
-#### [The Egg Puzzle](https://github.com/mayhd3/Complexity/wiki/EscapeKeeper-Setup)
-![gallery](https://raw.githubusercontent.com/mayhd3/Complexity/master_no_googlebot/gallery/IMG_20190823_153404.jpg)
+#### [The Egg Puzzle](https://github.com/MayCXC/Complexity/wiki/EscapeKeeper-Setup)
+![gallery](https://raw.githubusercontent.com/MayCXC/Complexity/master_no_googlebot/gallery/IMG_20190823_153404.jpg)
 
-Not pictured is [The Picture Puzzle](https://github.com/mayhd3/Complexity/wiki/Arduino-Programs#hall-effect-lock) (no pun intended) which was too wide to fit in frame, but it was the simplest to program, and its Arduino installation is completely concealed in a the wall.  
+Not pictured is [The Picture Puzzle](https://github.com/MayCXC/Complexity/wiki/Arduino-Programs#hall-effect-lock) (no pun intended) which was too wide to fit in frame, but it was the simplest to program, and its Arduino installation is completely concealed in a the wall.  
