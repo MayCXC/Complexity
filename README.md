@@ -11,7 +11,7 @@ The room these puzzles are in is dimly lit, which makes it hard for an employee 
 Every puzzle needs to have at least two states, including unsolved and solved. The transition from unsolved to solved is what players try to figure out during their session, the transition back from solved to unsolved is what employees use to reset the room between sessions. Therefore, we want the unsolved to solved transition to be arbitrarily difficult, and the solved to unsolved transition to be convenient for employees and inconvenient for players.
 
 ### Software
-Three puzzles run on arduino microcontrollers, their programs are found in this repository and further documented
+Three puzzles run on arduino microcontrollers, their programs may be found in this repository and further documented
 [in the wiki](https://github.com/MayCXC/Complexity/wiki/Arduino-Programs).
 One puzzle runs on five
 [escapekeeper juniors](https://www.frightideas.com/escapekeeper-jr.html),
